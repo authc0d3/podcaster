@@ -3,3 +3,9 @@
   max-width: $xl;
   margin: 0 auto;
 }
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
