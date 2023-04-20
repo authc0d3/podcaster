@@ -1,0 +1,16 @@
+.footer {
+  color: $light;
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+  a {
+    color: $light;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
