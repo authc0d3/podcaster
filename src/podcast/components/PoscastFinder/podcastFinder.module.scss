@@ -1,0 +1,24 @@
+.podcastFinder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: $light;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 350px;
+  margin: 25px auto;
+  padding: 4px 16px;
+
+  svg {
+    color: $dark;
+  }
+
+  input {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: $dark;
+    padding: 10px 0;
+  }
+}

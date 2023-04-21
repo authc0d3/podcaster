@@ -1,6 +1,7 @@
+import { FC } from "react";
 import styles from "./footer.module.scss";
 
-function Footer() {
+const Footer: FC = () => {
   return (
     <div className={styles.footer}>
       &copy; {new Date().getFullYear()}{" "}
@@ -9,6 +10,6 @@ function Footer() {
       </a>
     </div>
   );
-}
+};
 
 export default Footer;

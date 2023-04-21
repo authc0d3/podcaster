@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient } from "@tanstack/react-query";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
@@ -19,7 +20,7 @@ const persister = createSyncStoragePersister({
   storage: window.localStorage,
 });
 
-function App() {
+const App: FC = () => {
   return (
     <PersistQueryClientProvider
       client={queryClient}
@@ -34,6 +35,6 @@ function App() {
       </BrowserRouter>
     </PersistQueryClientProvider>
   );
-}
+};
 
 export default App;

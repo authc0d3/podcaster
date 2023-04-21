@@ -37,15 +37,22 @@
 
       h4 {
         @extend .ellipsis;
-        width: 260px;
+        max-width: 260px;
         margin: 100px auto 8px;
         color: $dark;
       }
       .author {
         @extend .ellipsis;
-        width: 260px;
-        color: $secondary;
-        font-size: 0.9rem;
+        background-color: $secondary;
+        color: $light;
+        border-radius: 25px;
+        padding: 4px 8px;
+        max-width: 150px;
+        font-size: 11px;
+
+        svg {
+          color: $primary;
+        }
       }
     }
   }

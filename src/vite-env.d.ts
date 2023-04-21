@@ -4,7 +4,7 @@ interface ImportMetaEnv {
   /**
    * The URL base to make all API requests
    */
-  readonly VITE_API_BASE_URL: string;
+  readonly VITE_PODCAST_API_BASE_URL: string;
 }
 
 interface ImportMeta {

@@ -4,7 +4,7 @@ import { podcastDtoToPodcast } from "../utils";
 export const getPodcasts = (): Promise<Readonly<Podcast[]>> => {
   return fetch(
     `${
-      import.meta.env.VITE_API_BASE_URL
+      import.meta.env.VITE_PODCAST_API_BASE_URL
     }/us/rss/toppodcasts/limit=100/genre=1310/json`
   )
     .then((response) => response.json())

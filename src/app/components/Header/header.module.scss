@@ -16,6 +16,11 @@
       text-decoration: none;
       transition-duration: 350ms;
       opacity: 0.8;
+
+      svg {
+        color: $primary;
+      }
+
       &:hover {
         opacity: 1;
       }
