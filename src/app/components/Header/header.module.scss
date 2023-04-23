@@ -4,10 +4,14 @@
   z-index: 2;
   color: $light;
   background-color: $dark;
-  padding: 12px 0;
+  box-shadow: $soft_shadow;
 
   .headerWrapper {
     @extend .wrapper;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     .logo {
       font-family: "Comfortaa", cursive;
@@ -17,13 +21,13 @@
       transition-duration: 350ms;
       opacity: 0.8;
 
-      svg {
-        color: $primary;
-      }
-
       &:hover {
         opacity: 1;
       }
+    }
+
+    svg {
+      color: $primary;
     }
   }
 }

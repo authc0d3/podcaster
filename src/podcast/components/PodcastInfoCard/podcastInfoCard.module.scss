@@ -1,0 +1,44 @@
+.podcastInfoCard {
+  @extend .card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 170px;
+    border-radius: $soft_rounded;
+    margin-bottom: 20px;
+  }
+
+  .about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 13px;
+      margin: 0 0 10px;
+    }
+  }
+
+  .summary {
+    h3 {
+      font-size: 12px;
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin: 0;
+      text-align: justify;
+      font-size: 13px;
+    }
+  }
+}

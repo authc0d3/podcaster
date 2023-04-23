@@ -1,0 +1,67 @@
+.episodes {
+  @extend .card;
+  padding: 0;
+  overflow: hidden;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background-color: $dark;
+    color: $light;
+
+    .h3 {
+      margin: 0;
+    }
+
+    .count {
+      background-color: $primary;
+      color: $dark;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: $soft_rounded;
+    }
+  }
+}
+
+.table {
+  display: grid;
+
+  .head,
+  .row {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+  }
+
+  .head {
+    font-weight: bold;
+    background-color: $secondary;
+    color: $light;
+
+    svg {
+      color: $primary;
+    }
+  }
+
+  .row {
+    &:nth-child(even) {
+      background-color: $light;
+    }
+    &:nth-child(odd) {
+      background-color: #e2e2e2;
+    }
+  }
+
+  .cell {
+    font-size: 13px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

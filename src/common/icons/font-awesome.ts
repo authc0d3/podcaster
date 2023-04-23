@@ -9,6 +9,10 @@ import {
   faExclamationTriangle,
   faExclamationCircle,
   faSpinner,
+  faCalendarAlt,
+  faClock,
+  faPlay,
+  faPlayCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -19,7 +23,11 @@ library.add(
   faCheckCircle,
   faExclamationTriangle,
   faExclamationCircle,
-  faSpinner
+  faSpinner,
+  faCalendarAlt,
+  faClock,
+  faPlay,
+  faPlayCircle
 );
 
 config.autoAddCss = false;

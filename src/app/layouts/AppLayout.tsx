@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import { Header, Footer } from "@/app/components";
+import { ScrollRestorator } from "@/common/components";
 import styles from "./appLayout.module.scss";
 
 interface AppLayoutProps {
@@ -10,8 +11,11 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className={styles.wrapper}>{children}</main>
+      <main className={styles.main}>
+        <div className={styles.appContainer}>{children}</div>
+      </main>
       <Footer />
+      <ScrollRestorator />
     </>
   );
 };

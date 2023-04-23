@@ -1,0 +1,13 @@
+.author {
+  @extend .ellipsis;
+  background-color: $secondary;
+  color: $light;
+  border-radius: 25px;
+  padding: 4px 8px;
+  max-width: 150px;
+  font-size: 11px;
+
+  svg {
+    color: $primary;
+  }
+}

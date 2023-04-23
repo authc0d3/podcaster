@@ -1,1 +1,2 @@
-export * from "./PodcastList";
+export * from "./PodcastListView";
+export * from "./PodcastDetailsView";
