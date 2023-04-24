@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { PODCAST_DETAIL_ROUTE } from "@/common/data";
-import { PodcastAuthorLabel } from "../PodcastAuthorLabel";
+import { PODCAST_DETAIL_ROUTE, PODCAST_ID_PARAM } from "@/common/data";
+import { PodcastAuthorLabel } from "@/podcast/components";
 import styles from "./podcastItem.module.scss";
 import { PodcastItemProps } from "./types";
 
 const PodcastItem: FC<PodcastItemProps> = ({ podcast }) => {
   return (
     <Link
-      to={`${PODCAST_DETAIL_ROUTE}/${podcast.id}`}
+      to={PODCAST_DETAIL_ROUTE.replace(PODCAST_ID_PARAM, podcast.id)}
       className={styles.podcastItem}
       title={`${podcast.name} - ${podcast.author}`}
       state={{ podcast }}

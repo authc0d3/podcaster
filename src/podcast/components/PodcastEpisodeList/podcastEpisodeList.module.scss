@@ -7,12 +7,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 16px;
+    padding: 20px;
     background-color: $dark;
     color: $light;
 
-    .h3 {
+    h3 {
       margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      svg {
+        color: $primary;
+      }
     }
 
     .count {
@@ -25,6 +32,7 @@
   }
 }
 
+// TODO: Move to _components.scss for reusability
 .table {
   display: grid;
 
@@ -45,11 +53,19 @@
   }
 
   .row {
+    color: $dark;
+    transition-duration: $soft_transition;
+
     &:nth-child(even) {
       background-color: $light;
     }
     &:nth-child(odd) {
       background-color: #e2e2e2;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $dark;
     }
   }
 
@@ -64,4 +80,8 @@
       text-align: right;
     }
   }
+}
+
+.noEpisodes {
+  margin: 20px;
 }

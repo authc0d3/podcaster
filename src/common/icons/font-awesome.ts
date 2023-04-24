@@ -1,7 +1,7 @@
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import {
-  faHeadphones,
+  faPodcast,
   faMicrophone,
   faSearch,
   faInfoCircle,
@@ -13,10 +13,11 @@ import {
   faClock,
   faPlay,
   faPlayCircle,
+  faList,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
-  faHeadphones,
+  faPodcast,
   faMicrophone,
   faSearch,
   faInfoCircle,
@@ -27,7 +28,8 @@ library.add(
   faCalendarAlt,
   faClock,
   faPlay,
-  faPlayCircle
+  faPlayCircle,
+  faList
 );
 
 config.autoAddCss = false;

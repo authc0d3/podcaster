@@ -1,5 +1,6 @@
-import { PodcastEpisode } from "@/common/dtos";
+import { Podcast, PodcastEpisode } from "@/common/dtos";
 
-export interface PodcastEpisodeListProps {
-  readonly episodes: Readonly<PodcastEpisode[]>;
+export interface PodcastEpisodeListProp {
+  readonly podcast: Podcast;
+  readonly episodes?: Readonly<PodcastEpisode[]>;
 }

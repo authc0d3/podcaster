@@ -11,7 +11,7 @@ const Header: FC = () => {
     <div className={styles.header}>
       <div className={styles.headerWrapper}>
         <Link to={HOME_ROUTE} className={styles.logo}>
-          <FontAwesomeIcon icon="headphones" /> Podcaster
+          <FontAwesomeIcon icon="podcast" /> Podcaster
         </Link>
         {loadingView && <FontAwesomeIcon icon="spinner" size="lg" spin />}
       </div>

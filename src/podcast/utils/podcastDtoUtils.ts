@@ -1,11 +1,10 @@
-import { addSeconds, format, parseISO } from "date-fns";
 import {
   Podcast,
   PodcastDto,
   PodcastEpisode,
   PodcastEpisodeDTO,
 } from "@/common/dtos";
-import { dateTimeFormat } from "@/common/utils";
+import { toDateTime, toDuration } from "@/common/utils";
 
 export const podcastDtoToPodcast = (data: PodcastDto): Podcast => ({
   id: data.id.attributes["im:id"],
@@ -17,15 +16,11 @@ export const podcastDtoToPodcast = (data: PodcastDto): Podcast => ({
 
 export const podcastEpisodeDtoToEpisode = (
   data: PodcastEpisodeDTO
-): PodcastEpisode => {
-  const durationHelperDate = addSeconds(
-    new Date(0),
-    data?.trackTimeMillis || 0
-  );
-  return {
-    id: data.trackId,
-    title: data.trackName,
-    date: format(parseISO(data.releaseDate), dateTimeFormat.L),
-    duration: format(durationHelperDate, dateTimeFormat.MS),
-  };
-};
+): PodcastEpisode => ({
+  id: data.trackId,
+  title: data.trackName,
+  date: toDateTime(data.releaseDate),
+  duration: toDuration(data?.trackTimeMillis),
+  description: data.description?.replace(/(?:\r\n|\r|\n)/g, "<br />"),
+  trackUrl: data.episodeUrl,
+});

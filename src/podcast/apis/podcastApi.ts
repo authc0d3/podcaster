@@ -33,6 +33,7 @@ export function getPodcastDetails(
   )
     .then((response) => response.json())
     .then(({ results }: PodcastEpisodesResponse) => {
+      // Remove first result because is not a real episode
       if (results && results.length) results.shift();
       return results || [];
     })

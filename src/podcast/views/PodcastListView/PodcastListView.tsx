@@ -1,4 +1,5 @@
 import { FC, useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
 import { Podcast } from "@/common/dtos";
 import { Alert, PageContainer } from "@/common/components";
@@ -24,6 +25,9 @@ const PodcastListView: FC = () => {
 
   return (
     <PageContainer name="podcasts" isLoading={isFetching} isError={isError}>
+      <Helmet>
+        <title>Podcaster - Top podcasts</title>
+      </Helmet>
       <PodcastFinder onSearch={setSearch} />
       <div className={styles.podcastList}>
         {podcasts && podcasts.length ? (
