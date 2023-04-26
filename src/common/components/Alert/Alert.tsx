@@ -21,9 +21,10 @@ const Alert: FC<AlertProps> = ({ text, type, icon, showIcon, className }) => {
         styles[type || "info"],
         className || ""
       )}
+      role="alert"
     >
       {showIcon && (
-        <FontAwesomeIcon icon={iconName} spin={type === "loading"} />
+        <FontAwesomeIcon icon={iconName} spin={type === "loading"} role="img" />
       )}
       {text}
     </div>

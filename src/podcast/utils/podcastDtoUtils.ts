@@ -4,7 +4,7 @@ import {
   PodcastEpisode,
   PodcastEpisodeDTO,
 } from "@/common/dtos";
-import { toDateTime, toDuration } from "@/common/utils";
+import { toDate, toDuration } from "@/common/utils";
 
 export const podcastDtoToPodcast = (data: PodcastDto): Podcast => ({
   id: data.id.attributes["im:id"],
@@ -19,7 +19,7 @@ export const podcastEpisodeDtoToEpisode = (
 ): PodcastEpisode => ({
   id: data.trackId,
   title: data.trackName,
-  date: toDateTime(data.releaseDate),
+  date: toDate(data.releaseDate),
   duration: toDuration(data?.trackTimeMillis),
   description: data.description?.replace(/(?:\r\n|\r|\n)/g, "<br />"),
   trackUrl: data.episodeUrl,

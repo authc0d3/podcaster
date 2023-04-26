@@ -28,12 +28,14 @@ const PageContainer: FC<PageContainerProps> = ({
   }
 
   if (isError) {
-    <Alert
-      text={`Ups! An error occurred while loading ${name || "the page"}`}
-      type="error"
-      className={styles.alert}
-      showIcon
-    />;
+    return (
+      <Alert
+        text={`Ups! An error occurred while loading ${name || "the page"}`}
+        type="error"
+        className={styles.alert}
+        showIcon
+      />
+    );
   }
   return (
     <>

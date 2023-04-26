@@ -1,9 +1,9 @@
-import * as sanitizeHtmlFn from "sanitize-html";
+import sanitizeHtmlFn from "sanitize-html";
 
 export const defaultSanitizeHtmlOptions: sanitizeHtmlFn.IOptions = {
-  allowedTags: ["b", "i", "em", "strong", "a", "br"],
+  allowedTags: ["b", "i", "em", "strong", "a", "br", "p"],
   allowedAttributes: {
-    a: ["href"],
+    a: ["href", "role"],
   },
 };
 

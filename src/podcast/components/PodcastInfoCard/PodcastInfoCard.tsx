@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { PODCAST_DETAIL_ROUTE, PODCAST_ID_PARAM } from "@/common/data";
-import { PodcastAuthorLabel } from "@/podcast/components/PodcastAuthorLabel";
+import { PodcastAuthorLabel } from "@/podcast/components";
 import { PodcastInfoCardProps } from "./types";
 import styles from "./podcastInfoCard.module.scss";
 
@@ -16,9 +16,13 @@ const PodcastInfoCard: FC<PodcastInfoCardProps> = ({ podcast }) => {
   }
 
   return (
-    <div className={styles.podcastInfoCard}>
-      <button className={styles.about} onClick={handleNavigateToPodcast}>
-        <img src={imageUrl} alt={name} />
+    <div className={styles.podcastInfoCard} role="podcast">
+      <button
+        className={styles.about}
+        onClick={handleNavigateToPodcast}
+        role="button"
+      >
+        <img src={imageUrl} alt={name} role="img" />
         <div>
           <h2>{name}</h2>
           <PodcastAuthorLabel name={author} />

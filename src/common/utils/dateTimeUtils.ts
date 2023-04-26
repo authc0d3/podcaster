@@ -1,4 +1,11 @@
-import { format, parseISO, addSeconds } from "date-fns";
+import {
+  format,
+  parseISO,
+  addSeconds,
+  formatISO,
+  milliseconds,
+  intervalToDuration,
+} from "date-fns";
 
 export interface DateTimeFormat {
   readonly MS: string;
@@ -12,8 +19,21 @@ export const dateTimeFormat: DateTimeFormat = {
   DTM: "MM/dd/yyyy HH:mm",
 };
 
-export const toDateTime = (timestamp?: string): string =>
-  format(timestamp ? parseISO(timestamp) : new Date(), dateTimeFormat.L);
+export function toDate(timestamp?: string): string {
+  const date = timestamp?.split("T").shift() || new Date();
+  const isoDate = new Date(date).toISOString();
+  return format(parseISO(isoDate), dateTimeFormat.L);
+}
 
-export const toDuration = (milliseconds?: number): string =>
-  format(addSeconds(new Date(0), milliseconds || 0), dateTimeFormat.MS);
+export function toDuration(milliseconds?: number): string {
+  const { hours, minutes, seconds } = intervalToDuration({
+    start: 0,
+    end: milliseconds || 0,
+  });
+
+  const formatedHours = hours && hours > 0 ? `${hours}:` : "";
+  const formatedMinutes = `${(minutes || 0).toString().padStart(2, "0")}:`;
+  const formatedSeconds = (seconds || 0).toString().padStart(2, "0");
+
+  return `${formatedHours}${formatedMinutes}${formatedSeconds}`;
+}

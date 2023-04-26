@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { PodcasterContext } from "../contexts";
+import { PodcasterContext } from "@/common/context";
 
 interface UseLoadingReturn {
   readonly isLoading: boolean;
