@@ -8,14 +8,14 @@ import styles from "./header.module.scss";
 const Header: FC = () => {
   const { loadingView } = useContext(PodcasterContext);
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.headerWrapper}>
         <Link to={HOME_ROUTE} className={styles.logo} role="link">
           <FontAwesomeIcon icon="podcast" /> Podcaster
         </Link>
         {loadingView && <FontAwesomeIcon spin size="lg" icon="spinner" />}
       </div>
-    </div>
+    </header>
   );
 };
 
