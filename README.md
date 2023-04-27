@@ -29,7 +29,7 @@ To start the project in development mode, run the command below:
 npm run dev
 ```
 
-Vite will launch the web server at the following address: http://localhost:3000
+Vite will launch the web server at the following address: http://localhost:3000/podcaster
 
 ### Build for production
 
@@ -47,7 +47,7 @@ If you want to preview the compiled application for production, run the followin
 npm run preview
 ```
 
-The preview server will starts at: http://localhost:8080/
+The preview server will starts at: http://localhost:8080/podcaster
 
 ## ⚛️ Technology stack
 

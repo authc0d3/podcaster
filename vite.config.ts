@@ -9,6 +9,7 @@ const rootPath = path.resolve(__dirname, "src");
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/podcaster",
   plugins: [react()],
   server: {
     port: 3000,
