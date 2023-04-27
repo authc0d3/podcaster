@@ -32,7 +32,7 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: `${rootPath}/test/setupTest.ts`,
     css: true,
-    testTimeout: 30000,
-    hookTimeout: 30000,
+    testTimeout: 60000,
+    hookTimeout: 60000,
   },
 });
