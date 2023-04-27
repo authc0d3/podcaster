@@ -22,10 +22,9 @@ const App: FC = () => {
     >
       <PodcasterContextProvider>
         <HelmetProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="/podcaster">
             <AppLayout>
               <Routes>
-                {/* TODO: Move routes to PodcastMainView */}
                 {[PODCAST_DETAIL_ROUTE, PODCAST_EPISODE_ROUTE].map((route) => (
                   <Route key={route} path={route} element={<PodcastView />} />
                 ))}
