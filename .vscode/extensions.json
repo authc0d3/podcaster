@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-spanish",
+    "naumovs.color-highlight",
+    "clinyong.vscode-css-modules",
+    "dbaeumer.vscode-eslint",
+    "fabiospampinato.vscode-highlight",
+    "wix.vscode-import-cost",
+    "ionutvmi.path-autocomplete",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "wayou.vscode-todo-highlight"
+  ]
+}
