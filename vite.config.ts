@@ -28,7 +28,6 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    exclude: ["node_modules/", "src/test/setupTests.ts"],
     environment: "jsdom",
     setupFiles: `${rootPath}/test/setupTest.ts`,
     css: true,

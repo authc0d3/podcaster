@@ -1,7 +1,8 @@
 {
-  "name": "vite-react-typescript",
+  "name": "podcaster",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0",
+  "homepage": "https://authc0d3.github.io/podcaster/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
