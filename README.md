@@ -74,6 +74,8 @@ The project directories are structured following a functionality / file type sch
 
 For example, for the main functionality of the project, we have the _/podcast_ directory, and inside it, we find folders such as _/components_, _/hooks_, _/views_, _/utils_, etc.
 
+![folder structure](https://github.com/authc0d3/podcaster/blob/main/assets/folder_structure.png?raw=true)
+
 For core and shared modules that are used by multiple functionalities or that could be shared in the future, we have the /commons directory.
 
 ### Good practices with imports / exports
