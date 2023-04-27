@@ -9,6 +9,7 @@ This project is a single page application built with TypeScript and React, using
 - [Project architecture](#📐-project-architecture)
 - [Testing](#🧪-testing)
 - [Future improvements](#🏗️-future-improvements)
+- [License](#📖-license)
 
 ## 🚀 Get started
 
@@ -132,3 +133,7 @@ No application is perfect and all can be improved, therefore, some of the improv
 - Implementing virtual scrolling in the podcast list, as well as lazy loading images.
 - Implementing a light / dark theme and giving users the option to use either one, or use the configured system theme by default.
 - Improving the application for accessibility
+
+# 📖 License
+
+This project is under [MIT license](https://opensource.org/license/mit/)
