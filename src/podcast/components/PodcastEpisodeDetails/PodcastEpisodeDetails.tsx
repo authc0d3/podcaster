@@ -16,6 +16,7 @@ const PodcastEpisodeDetails: FC<PodcastEpisodeProps> = ({ episode }) => {
 
   useEffect(() => {
     setIsLoading(true);
+    return () => setIsLoading(false);
   }, []);
 
   if (!episode) return null;
