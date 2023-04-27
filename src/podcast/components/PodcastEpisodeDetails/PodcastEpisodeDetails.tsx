@@ -29,20 +29,22 @@ const PodcastEpisodeDetails: FC<PodcastEpisodeProps> = ({ episode }) => {
           {title}
         </h3>
       </div>
-      <audio
-        autoPlay
-        playsInline
-        controls
-        src={trackUrl}
-        className={styles.controls}
-        onLoadedData={handleOnLoadedAudio}
-      >
-        <Alert
-          text="Your browser does not support the audio element."
-          type="warning"
-          showIcon
-        />
-      </audio>
+      <div className={styles.audio}>
+        <audio
+          autoPlay
+          playsInline
+          controls
+          src={trackUrl}
+          className={styles.controls}
+          onLoadedData={handleOnLoadedAudio}
+        >
+          <Alert
+            text="Your browser does not support the audio element."
+            type="warning"
+            showIcon
+          />
+        </audio>
+      </div>
       <div
         role="article"
         className={styles.description}
