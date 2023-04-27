@@ -119,6 +119,8 @@ Vitest also has a web interface where you can run and view test results in a mor
 npm run test:ui
 ```
 
+![folder structure](https://github.com/authc0d3/podcaster/blob/main/assets/vitest.png?raw=true)
+
 Finalmente, Vitest también puede analizar la cobertura de los test. Para ejecutarlo puedes usar el siguiente comando:
 
 ```console
