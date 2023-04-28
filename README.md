@@ -2,7 +2,7 @@
 
 ## A blazingly fast podcast SPA demo application
 
-This project is a single page application built with TypeScript and React, using the iTunes API for podcast playback. Get stared and read more information in the sections below:
+This project is a single page application built with TypeScript and React, using the [iTunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html) for podcast playback. Get stared and read more information in the sections below:
 
 - [Get started](#get-started)
 - [Technology stack](#technology-stack)
