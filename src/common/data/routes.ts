@@ -1,4 +1,4 @@
-import { PRODUCTION_MODE } from "../utils";
+import { PRODUCTION_MODE } from "@/common/utils";
 
 // Route params
 export const PODCAST_ID_PARAM = ":podcastId";
