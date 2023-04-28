@@ -52,7 +52,7 @@ The preview server will starts at: http://localhost:8080/podcaster
 
 ## ⚛️ Technology stack<a id="technology-stack"></a>
 
-This project is written in [TypeScript](https://www.typescriptlang.org/) as the main programming language, [React](https://react.dev/) for graphical user interface development and SCSS for styles pre-processing.
+This project is written in [TypeScript](https://www.typescriptlang.org/) as the main programming language, [React](https://react.dev/) for graphical user interface development and SASS for styles pre-processing.
 
 Other main libraries used for its development include:
 
@@ -80,7 +80,7 @@ For example, for the main functionality of the project, we have the _/podcast_ d
 
 For core and shared modules that are used by multiple functionalities or that could be shared in the future, we have the /commons directory.
 
-### Good practices with imports / exports
+### Good practices using imports / exports
 
 Another good practice applied in this project is the way of exporting and importing modules. Each module has an index.ts file whose sole functionality is to export the functions, interfaces, etc. from the different subdirectories and files of the module, making imports more optimal and much more elegant in terms of code.
 
@@ -103,6 +103,8 @@ The project has a _.vscode_ folder that recommends the use of some extensions su
 npm run format
 npm run lint
 ```
+
+Regarding styles, we have opted to use SCSS instead of SASS to maintain a syntax closer to pure CSS.
 
 ## 🧪 Testing<a id="testing"></a>
 
