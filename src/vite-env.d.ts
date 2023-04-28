@@ -11,6 +11,11 @@ interface ImportMetaEnv {
    */
   readonly VITE_ALLORIGINS_URL: string;
   readonly VITE_PODCAST_API_BASE_URL: string;
+
+  /**
+   * To check testing mode
+   */
+  readonly VITE_TESTING_MODE: boolean;
 }
 
 interface ImportMeta {
