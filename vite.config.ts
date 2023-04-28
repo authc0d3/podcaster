@@ -7,32 +7,38 @@ import react from "@vitejs/plugin-react";
 
 const rootPath = path.resolve(__dirname, "src");
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  base: "/podcaster",
-  plugins: [react()],
-  server: {
-    port: 3000,
-  },
-  preview: {
-    port: 8080,
-  },
-  resolve: {
-    alias: [{ find: "@", replacement: rootPath }],
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "${rootPath}/common/styles/_index";`,
+export default defineConfig(({ mode }) => {
+  const prod = mode === "production";
+  return {
+    base: prod ? "/podcaster" : "/",
+    plugins: [react()],
+    build: {
+      sourcemap: prod,
+      minify: prod,
+    },
+    server: {
+      port: 3000,
+    },
+    preview: {
+      port: 8080,
+    },
+    resolve: {
+      alias: [{ find: "@", replacement: rootPath }],
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "${rootPath}/common/styles/_index";`,
+        },
       },
     },
-  },
-  test: {
-    globals: true,
-    environment: "jsdom",
-    setupFiles: `${rootPath}/test/setupTest.ts`,
-    css: true,
-    testTimeout: 60000,
-    hookTimeout: 60000,
-  },
+    test: {
+      globals: true,
+      environment: "jsdom",
+      setupFiles: `${rootPath}/test/setupTest.ts`,
+      css: true,
+      testTimeout: 30000,
+      hookTimeout: 30000,
+    },
+  };
 });
