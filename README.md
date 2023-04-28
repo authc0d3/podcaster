@@ -146,6 +146,7 @@ No application is perfect and all can be improved, therefore, some of the improv
 - Implementing virtual scrolling in the podcast list, as well as lazy loading images.
 - Implementing a light / dark theme and giving users the option to use either one, or use the configured system theme by default.
 - Improving the application for accessibility
+- Add a breadcrumb to improve navigation
 
 # 📖 License<a id="license"></a>
 
