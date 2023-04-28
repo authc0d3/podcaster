@@ -4,15 +4,15 @@
 
 This project is a single page application built with TypeScript and React, using the iTunes API for podcast playback. Get stared and read more information in the sections below:
 
-- [Get started](#🚀-get-started)
-- [Technology stack](#⚛️-technology-stack)
-- [Project architecture](#📐-project-architecture)
-- [Testing](#🧪-testing)
-- [Workflows](#⚙️-workflows)
-- [Future improvements](#🏗️-future-improvements)
-- [License](#📖-license)
+- [Get started](#get-started)
+- [Technology stack](#technology-stack)
+- [Project architecture](#project-architecture)
+- [Testing](#testing)
+- [Workflows](#workflows)
+- [Future improvements](#future-improvements)
+- [License](#license)
 
-## 🚀 Get started
+## 🚀 Get started<a id="get-started"></a>
 
 This project uses [Vite](https://vitejs.dev/), a frontend tool that provides you with a fast and easily extensible development environment. To launch the application, you only need to have [Node.js](https://nodejs.org/) previously installed on your computer.
 
@@ -50,7 +50,7 @@ npm run preview
 
 The preview server will starts at: http://localhost:8080/podcaster
 
-## ⚛️ Technology stack
+## ⚛️ Technology stack<a id="technology-stack"></a>
 
 This project is written in [TypeScript](https://www.typescriptlang.org/) as the main programming language and makes use of [React](https://react.dev/) for graphical user interface development.
 
@@ -66,7 +66,7 @@ Other main libraries used for its development include:
 
 - **sanitize-html**: provides a simple HTML sanitizer with a clear API. [More info.](https://github.com/apostrophecms/sanitize-html)
 
-## 📐 Project architecture
+## 📐 Project architecture<a id="project-architecture"></a>
 
 To facilitate the long-term extension and maintainability of the project, a clean directory and file architecture has been chosen.
 
@@ -104,7 +104,7 @@ npm run format
 npm run lint
 ```
 
-## 🧪 Testing
+## 🧪 Testing<a id="testing"></a>
 
 This project uses Vitest as a test runner, and testing library with jest-dom for unit testing of components, hooks, etc.
 
@@ -128,7 +128,7 @@ Finalmente, Vitest también puede analizar la cobertura de los test. Para ejecut
 npm run test:coverage
 ```
 
-## ⚙️ Workflows
+## ⚙️ Workflows<a id="workflows"></a>
 
 This project uses GitHub Actions and Pages services to perform the build and deployment.
 
@@ -138,7 +138,7 @@ On one hand, we have the pull-request workflow, which automatically runs the tes
 
 On the other hand, there is the workflow for deploying the application, which is executed when a commit is made to the main branch. It uses the [JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action) action to compile and deploy the project to Github Pages.
 
-## 🏗️ Future improvements
+## 🏗️ Future improvements<a id="future-improvements"></a>
 
 No application is perfect and all can be improved, therefore, some of the improvements that would be nice to implement in the future for this project are:
 
@@ -147,6 +147,6 @@ No application is perfect and all can be improved, therefore, some of the improv
 - Implementing a light / dark theme and giving users the option to use either one, or use the configured system theme by default.
 - Improving the application for accessibility
 
-# 📖 License
+# 📖 License<a id="license"></a>
 
 This project is under [MIT license](https://opensource.org/license/mit/)
