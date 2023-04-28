@@ -8,7 +8,7 @@ This project is a single page application built with TypeScript and React, using
 - [Technology stack](#⚛️-technology-stack)
 - [Project architecture](#📐-project-architecture)
 - [Testing](#🧪-testing)
-- [Deployment]
+- [Workflows](#⚙️-workflows)
 - [Future improvements](#🏗️-future-improvements)
 - [License](#📖-license)
 
