@@ -8,6 +8,7 @@ This project is a single page application built with TypeScript and React, using
 - [Technology stack](#⚛️-technology-stack)
 - [Project architecture](#📐-project-architecture)
 - [Testing](#🧪-testing)
+- [Deployment]
 - [Future improvements](#🏗️-future-improvements)
 - [License](#📖-license)
 
@@ -126,6 +127,16 @@ Finalmente, Vitest también puede analizar la cobertura de los test. Para ejecut
 ```console
 npm run test:coverage
 ```
+
+## ⚙️ Workflows
+
+This project uses GitHub Actions and Pages services to perform the build and deployment.
+
+In _/.github/workflows_ folder, you can find two YAML files with the declaration of the actions that GitHub Actions should trigger when certain events occur.
+
+On one hand, we have the pull-request workflow, which automatically runs the tests of a branch when a pull-request is opened against the main branch.
+
+On the other hand, there is the workflow for deploying the application, which is executed when a commit is made to the main branch. It uses the [JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action) action to compile and deploy the project to Github Pages.
 
 ## 🏗️ Future improvements
 
