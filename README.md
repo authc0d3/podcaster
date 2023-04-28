@@ -52,7 +52,7 @@ The preview server will starts at: http://localhost:8080/podcaster
 
 ## ⚛️ Technology stack<a id="technology-stack"></a>
 
-This project is written in [TypeScript](https://www.typescriptlang.org/) as the main programming language and makes use of [React](https://react.dev/) for graphical user interface development.
+This project is written in [TypeScript](https://www.typescriptlang.org/) as the main programming language, [React](https://react.dev/) for graphical user interface development and SCSS for styles pre-processing.
 
 Other main libraries used for its development include:
 
@@ -122,7 +122,7 @@ npm run test:ui
 
 ![folder structure](https://github.com/authc0d3/podcaster/blob/main/assets/vitest.png?raw=true)
 
-Finalmente, Vitest también puede analizar la cobertura de los test. Para ejecutarlo puedes usar el siguiente comando:
+Finally, Vitest can also analyze test coverage. To do so, you can use the following command:
 
 ```console
 npm run test:coverage
