@@ -5,6 +5,7 @@ import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client
 import { Redirect } from "@/common/components";
 import { PodcasterContextProvider } from "@/common/context";
 import {
+  APP_BASE_PATH,
   HOME_ROUTE,
   PODCAST_DETAIL_ROUTE,
   PODCAST_EPISODE_ROUTE,
@@ -21,9 +22,7 @@ const App: FC = () => (
   >
     <PodcasterContextProvider>
       <HelmetProvider>
-        <BrowserRouter
-          basename={import.meta.env.VITE_TESTING_MODE ? "/" : "/podcaster"}
-        >
+        <BrowserRouter basename={APP_BASE_PATH}>
           <AppLayout>
             <Routes>
               {[PODCAST_DETAIL_ROUTE, PODCAST_EPISODE_ROUTE].map((route) => (
