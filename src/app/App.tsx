@@ -4,14 +4,9 @@ import { HelmetProvider } from "react-helmet-async";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { Redirect } from "@/common/components";
 import { PodcasterContextProvider } from "@/common/context";
-import {
-  APP_BASE_PATH,
-  HOME_ROUTE,
-  PODCAST_DETAIL_ROUTE,
-  PODCAST_EPISODE_ROUTE,
-} from "@/common/data";
-import { PodcastView, PodcastListView } from "@/podcast/views";
-import AppLayout from "./layouts/AppLayout";
+import { APP_BASE_PATH, HOME_ROUTE } from "@/common/data";
+import { PodcastMainView } from "@/podcast/views";
+import { AppLayout } from "@/app/layouts";
 import "./App.scss";
 import { queryClient, persister } from "./apis";
 
@@ -25,10 +20,7 @@ const App: FC = () => (
         <BrowserRouter basename={APP_BASE_PATH}>
           <AppLayout>
             <Routes>
-              {[PODCAST_DETAIL_ROUTE, PODCAST_EPISODE_ROUTE].map((route) => (
-                <Route key={route} path={route} element={<PodcastView />} />
-              ))}
-              <Route path={HOME_ROUTE} element={<PodcastListView />} />
+              <Route path={`${HOME_ROUTE}*`} element={<PodcastMainView />} />
               <Route path="*" element={<Redirect to={HOME_ROUTE} />} />
             </Routes>
           </AppLayout>
