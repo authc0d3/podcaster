@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PODCAST_DETAIL_ROUTE, PODCAST_ID_PARAM } from "@/common/data";
 import { mockedPodcast } from "@/test/mocks";
@@ -22,7 +22,11 @@ async function renderComponent() {
 }
 
 describe("PodcastItem", () => {
-  beforeEach(cleanup);
+  it("should render podcast item", async () => {
+    await renderComponent();
+    expect(screen.queryByText(/Lorem ipsum/i)).toBeVisible();
+    expect(screen.queryByText(/John Doe/i)).toBeVisible();
+  });
 
   it("should navigate on click", async () => {
     await renderComponent();

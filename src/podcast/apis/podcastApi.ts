@@ -6,6 +6,7 @@ import {
   PodcastEpisodesResponse,
   PodcastResponse,
 } from "@/common/dtos";
+import { TESTING_MODE } from "@/common/utils";
 import {
   podcastDtoToPodcast,
   podcastEpisodeDtoToEpisode,
@@ -20,6 +21,12 @@ export const API_GET_EPISODES_URL =
   "/lookup?id=:podcastId&media=podcast&entity=podcastEpisode&limit=20";
 
 export function getApiUrl(path: string, relative?: boolean): string {
+  if (TESTING_MODE) {
+    return `${import.meta.env.VITE_PODCAST_API_BASE_URL}${path
+      .split("?")
+      .at(0)}`;
+  }
+
   const encodedUri = encodeURIComponent(
     `${import.meta.env.VITE_PODCAST_API_BASE_URL}${path}`
   );

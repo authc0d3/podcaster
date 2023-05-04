@@ -1,4 +1,4 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { IconName } from "@fortawesome/fontawesome-svg-core";
 import Alert from "./Alert";
 import { AlertProps, AlertType } from "./types";

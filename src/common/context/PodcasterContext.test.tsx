@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { FC, useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { PodcasterContext, PodcasterContextProvider } from "./PodcasterContext";
@@ -17,7 +17,6 @@ const Button: FC = () => {
 
 describe("PodcasterContext", () => {
   it("should modify context", async () => {
-    // TODO: Mock podcaster context
     await render(
       <BrowserRouter>
         <PodcasterContextProvider>

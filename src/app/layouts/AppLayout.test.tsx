@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import { PodcasterContextProvider } from "@/common/context";
 import AppLayout from "./AppLayout";
-import { BrowserRouter } from "react-router-dom";
 
 async function renderComponent() {
   return await render(

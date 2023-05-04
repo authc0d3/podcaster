@@ -1,4 +1,4 @@
-import { dateTimeFormat, toDate, toDuration } from "./dateTimeUtils";
+import { toDate, toDuration } from "./dateTimeUtils";
 
 describe("dateTimeUtils", () => {
   it("should transform ISO date to date-time", () => {

@@ -12,8 +12,7 @@ import { PodcasterContextProvider } from "@/common/context";
 import { HelmetProvider } from "react-helmet-async";
 import { queryClient, persister } from "@/app/apis";
 import { BrowserRouter } from "react-router-dom";
-
-const timeout = 30000;
+import { mockApiServer } from "@/test/mocks";
 
 async function renderComponent() {
   // TODO: Mock usePodcastApi hook instead of using providers
@@ -34,28 +33,25 @@ async function renderComponent() {
 }
 
 describe("PodcastListView", () => {
-  beforeEach(cleanup);
+  // beforeAll(() => {
+  //   cleanup();
+  //   mockApiServer.listen({ onUnhandledRequest: "error" });
+  // });
+  // afterAll(() => mockApiServer.close());
+  // afterEach(() => mockApiServer.resetHandlers());
 
   it("should show and hide loading alert", async () => {
     await renderComponent();
-    await waitFor(
-      () => {
-        expect(screen.queryByText(/Loading podcasts/i)).toBeVisible();
-      },
-      { timeout }
-    );
-    await waitForElementToBeRemoved(screen.queryByText(/Loading podcasts/i), {
-      timeout,
+    await waitFor(() => {
+      expect(screen.queryByText(/Loading podcasts/i)).toBeVisible();
     });
+    await waitForElementToBeRemoved(screen.queryByText(/Loading podcasts/i));
   });
 
   it("should render podcast list", async () => {
     const { container } = await renderComponent();
-    await waitFor(
-      () => {
-        expect(container.querySelector("a[role='podcast']")).toBeVisible();
-      },
-      { timeout }
-    );
+    await waitFor(() => {
+      expect(container.querySelector("a[role='podcast']")).toBeVisible();
+    });
   });
 });

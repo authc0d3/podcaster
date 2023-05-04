@@ -1,3 +1,4 @@
+import deepEqual from "deep-equal";
 import {
   mockedEpisode,
   mockedEpisodeDto,
@@ -8,7 +9,6 @@ import {
   podcastDtoToPodcast,
   podcastEpisodeDtoToEpisode,
 } from "./podcastDtoUtils";
-import deepEqual from "deep-equal";
 
 describe("podcastDtoUtils", () => {
   it("should transform PodcastDto to Podcast", () => {

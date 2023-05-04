@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PodcastEpisode } from "@/common/dtos";
 import PodcastEpisodeList from "./PodcastEpisodeList";
@@ -35,8 +35,6 @@ async function renderComponent(mockEpisodes?: Readonly<PodcastEpisode[]>) {
 }
 
 describe("PodcastEpisodeList", () => {
-  beforeEach(cleanup);
-
   it("should render component", async () => {
     await renderComponent([mockedEpisode]);
     expect(screen.getByText(/Episodes/i)).toBeVisible();
