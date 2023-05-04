@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { mockedPodcast, mockedUseNavigate } from "@/test/mocks";
 import PodcastInfoCard from "./PodcastInfoCard";
 
@@ -9,8 +9,6 @@ async function renderComponent() {
 const { imageUrl, name, author, summary } = mockedPodcast;
 
 describe("PodcastInfoCard", () => {
-  beforeEach(cleanup);
-
   it("should show podcast image", async () => {
     await renderComponent();
     const image = screen.getByRole("img");

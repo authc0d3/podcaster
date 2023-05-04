@@ -1,6 +1,7 @@
 import "@testing-library/jest-dom";
 import "@/common/icons/font-awesome";
-import { mockedUseLocation, mockedUseNavigate } from "./mocks";
+import { mockApiServer, mockedUseLocation, mockedUseNavigate } from "./mocks";
+import { cleanup } from "@testing-library/react";
 
 /**
  * Mock functions
@@ -18,3 +19,18 @@ vi.mock("react-router-dom", async () => {
     useLocation: mockedUseLocation,
   };
 });
+
+/**
+ * Global config for test hooks
+ */
+
+beforeEach(cleanup);
+
+beforeAll(() => {
+  cleanup();
+  mockApiServer.listen({ onUnhandledRequest: "error" });
+});
+
+afterAll(() => mockApiServer.close());
+
+afterEach(() => mockApiServer.resetHandlers());

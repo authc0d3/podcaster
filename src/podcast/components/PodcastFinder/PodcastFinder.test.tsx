@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import PodcastFinder from "./PodcastFinder";
 
 const mockOnSearch = vi.fn();
@@ -8,12 +8,12 @@ async function renderComponent() {
 }
 
 describe("PodcastFinder", () => {
-  beforeEach(cleanup);
-
   it("should render component", async () => {
     const { container } = await renderComponent();
+
     const input = screen.getByPlaceholderText(/Search podcasts/i);
     expect(input).toBeVisible();
+
     const icon = container
       .getElementsByTagName("svg")?.[0]
       .getAttribute("class");

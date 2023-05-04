@@ -6,7 +6,7 @@ describe("PodcastAuthorLabel", () => {
     const { container } = await render(<PodcastAuthorLabel name="John Doe" />);
     expect(screen.getByText(/John Doe/i)).toBeVisible();
     expect(
-      container.getElementsByTagName("svg")?.[0].getAttribute("class")
+      container.getElementsByTagName("svg")?.[0]?.getAttribute("class")
     ).toMatch(/microphone/i);
   });
 });

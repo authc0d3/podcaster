@@ -1,4 +1,4 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { PodcasterContextProvider } from "@/common/context";
 import PageContainer from "./PageContainer";
@@ -17,8 +17,6 @@ async function renderComponent(props?: Partial<PageContainerProps>) {
 }
 
 describe("PageContainer", () => {
-  beforeEach(cleanup);
-
   it("should render component", async () => {
     await renderComponent();
     expect(screen.getByText(/Lorem ipsum/i)).toBeVisible();
